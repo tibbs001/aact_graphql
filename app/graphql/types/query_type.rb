@@ -5,7 +5,7 @@ module Types
 
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
-    field :studies, [Types::StudyType], null: false
+    field :studies, function: Resolvers::StudiesSearch
 
     field :study, Types::StudyType, null: true do
       description 'Find a study by NCT ID'
@@ -41,10 +41,6 @@ module Types
 
     def condition(id:)
       Condition.find(id)
-    end
-
-    def studies
-      Study.all
     end
 
   end

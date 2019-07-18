@@ -5,6 +5,8 @@ ruby '2.5.3'
 
 gem 'graphql'
 gem 'graphiql-rails'
+gem 'search_object', '1.2.0'
+gem 'search_object_graphql', '0.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
